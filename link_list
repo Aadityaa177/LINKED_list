@@ -30,6 +30,32 @@ void insert(int element)
     }
 }
 
+void del()
+{
+    if(head==NULL)
+    {
+        cout<<"List is empty"<<endl;
+    }
+    else if(head==tail)
+    {
+        cout<<"only one element is present"<<endl;
+        delete tail;
+        tail = NULL;
+        head = NULL;
+    }
+    else
+    {
+        temp = head;
+        while(temp->nxt!=tail)
+        {
+            temp = temp->nxt;
+        }
+        delete tail;
+        tail = temp;
+        tail->nxt = NULL;
+    }
+}
+
 void display()
 {
     if(head == NULL)
@@ -53,12 +79,30 @@ int main()
     insert(7);
     insert(5);
     display();
+    del();
+    display();
+    del();
+    display();
+    del();
+    display();
+    del();
+    display();
+    del();
+    display();
 }
 
 
 """output:
-9
-5
-14
-7
-5"""
+list of elements are:
+9 5 14 7 5 
+list of elements are:
+9 5 14 7 
+list of elements are:
+9 5 14 
+list of elements are:
+9 5 
+list of elements are:
+9 
+only one element is present
+List is empty
+"""
