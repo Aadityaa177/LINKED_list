@@ -64,10 +64,12 @@ void display()
     }
     else
     {
+        cout<<"List of elements are:"<<endl;
         for(temp = head; temp != NULL; temp = temp->nxt)
         {
-            cout<<temp->data<<endl;
+            cout<<temp->data<<" ";
         }
+        cout<<endl;
     }
 }
 
@@ -93,21 +95,16 @@ int main()
 
 
 """output:
-9
-5
-14
-7
-5
-9
-5
-14
-7
-9
-5
-14
-9
-5
-9
+List of elements are:
+9 5 14 7 5 
+List of elements are:
+9 5 14 7 
+List of elements are:
+9 5 14 
+List of elements are:
+9 5 
+List of elements are:
+9 
 only one element is present
 List is empty
 """
