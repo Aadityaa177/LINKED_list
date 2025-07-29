@@ -93,16 +93,21 @@ int main()
 
 
 """output:
-list of elements are:
-9 5 14 7 5 
-list of elements are:
-9 5 14 7 
-list of elements are:
-9 5 14 
-list of elements are:
-9 5 
-list of elements are:
-9 
+9
+5
+14
+7
+5
+9
+5
+14
+7
+9
+5
+14
+9
+5
+9
 only one element is present
 List is empty
 """
