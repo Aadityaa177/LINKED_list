@@ -25,8 +25,8 @@ void insert(int element)
     }
     else
     {
-        tail->nxt = newnode;
-        tail = newnode;
+        newnode->nxt = head;
+        head = newnode;
     }
 }
 
@@ -96,15 +96,15 @@ int main()
 
 """output:
 List of elements are:
-9 5 14 7 5 
+5 7 14 9 5 
 List of elements are:
-9 5 14 7 
+5 7 14 9 
 List of elements are:
-9 5 14 
+5 7 14 
 List of elements are:
-9 5 
+5 7 
 List of elements are:
-9 
+5 
 only one element is present
 List is empty
 """
