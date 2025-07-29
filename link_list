@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+struct node
+{
+    int data;
+    struct node* nxt;
+}*temp, *newnode, *head, *tail;
+
+void insert(int element)
+{
+    newnode = (struct node*)malloc(sizeof(struct node));
+    newnode->data = element;
+    newnode->nxt = NULL;
+    if(head == NULL)
+    {
+        head = newnode;
+        tail = newnode;
+        return;
+    }
+    else if(head->nxt==NULL)
+    {
+        head->nxt = newnode;
+        tail = newnode;
+    }
+    else
+    {
+        tail->nxt = newnode;
+        tail = newnode;
+    }
+}
+
+void display()
+{
+    if(head == NULL)
+    {
+        cout<<"List is empty"<<endl;
+    }
+    else
+    {
+        for(temp = head; temp != NULL; temp = temp->nxt)
+        {
+            cout<<temp->data<<endl;
+        }
+    }
+}
+
+int main()
+{
+    insert(9);
+    insert(5);
+    insert(14);
+    insert(7);
+    insert(5);
+    display();
+}
+
+
+"""output:
+9
+5
+14
+7
+5"""
